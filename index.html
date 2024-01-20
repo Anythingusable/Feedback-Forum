@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>contact form</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container" id="container">
+
+    <form onsubmit="sendEmail(); reset(); return false" id="form" class="form">
+      <h3>
+        Get in Touch
+      </h3>
+
+      <input type="text" id="name" placeholder="Your Name" required />
+
+      <input type="tel" id="phone" placeholder="Your Phone No." required minlength="10" maxlength="10" />
+
+
+      <input type="email" id="email" placeholder="Your Email Id" required />
+
+      <select id="cause" placeholder="Select the Cause" required>
+        <option selected disabled>Choose an Option</option>
+
+        <option>Error In Website</option>
+        <option>Found a Bug</option>
+        <option>Application for a post</option>
+        <option>others</option>
+
+      </select>
+      <textarea rows:5 required id="message" type="text" placeholder="Enter your message here"
+        minlength="30"></textarea>
+      <button type="submit" onclick= "openPopup(); hideForm();">Submit </button>
+    </form>
+    <!--Popup-->
+    <div class="popup" id="popup">
+      <img src="404-tick.png" />
+      <h1>
+        Thank You!
+      </h1>
+      <p>
+        Your feedback have been  successfully submitted. Thanks!
+      </p>
+      
+      <button type="button" onclick="closePopup(); showForm() ; document.location='https://7de7a450-58d9-4056-926c-00f0a152d1d3-00-1awwz09mblvaa.sisko.replit.dev/'">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  
+
+
+
+</body>
+
+</html>
